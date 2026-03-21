@@ -1,0 +1,25 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+env/
+.env
+
+# Javascript / Node
+node_modules/
+dist/
+build/
+.next/
+
+# Large Files & ML Models
+*.zip
+*.safetensors
+*.h5
+*.pkl
+*.bin
+
+# OS generated files
+.DS_Store
+Thumbs.db
