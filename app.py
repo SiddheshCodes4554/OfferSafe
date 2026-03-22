@@ -1,5 +1,6 @@
 from fastapi import FastAPI, UploadFile, File, HTTPException
 from fastapi.responses import JSONResponse
+from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel, Field
 from pdf2image import convert_from_bytes
 import pytesseract
@@ -69,6 +70,14 @@ app = FastAPI(
     lifespan=lifespan,
 )
 
+# Allow CORS for the frontend to communicate with the backend on Render
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],  # Adjust this in production to match your frontend domain
+    allow_credentials=False,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 # ──────────────────────────────────────────────────────────────
 # Utility functions
