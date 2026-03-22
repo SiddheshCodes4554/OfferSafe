@@ -14,8 +14,6 @@ build/
 .next/
 
 # Large Files & ML Models
-*.zip
-*.safetensors
 *.h5
 *.pkl
 *.bin
