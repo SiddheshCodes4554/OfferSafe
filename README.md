@@ -78,19 +78,6 @@ The frontend will be available at `http://localhost:5173`. Make sure to configur
 
 ---
 
-## ☁️ Deployment (Render)
-
-OfferSafe is fully configured for automated deployment on [Render](https://render.com/).
-
-1. Log in to your Render Dashboard.
-2. Click **New** -> **Blueprint**.
-3. Connect this GitHub repository.
-4. Render will read the `render.yaml` file and automatically provision:
-   - A **Static Site** for the React frontend.
-   - A **Docker Web Service** for the FastAPI backend (handling the Tesseract & Poppler system dependencies).
-5. **Important Note on Memory:** Render's free tier provides 512MB RAM. The AI models require significant memory upon startup. If the backend service crashes with an Out-of-Memory (OOM) error, you will need to upgrade the backend service to at least 1GB RAM.
-
----
 
 ## 🤝 Contributing
 Contributions, issues, and feature requests are welcome! Feel free to check the issues page.
